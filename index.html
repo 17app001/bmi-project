@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算機</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>BMI計算機</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <section>
+        <article>
+            <h1>公式:</h1>
+            <p><mark>BMI = 體重(公斤) / 身高2(公尺2)</mark></p>
+            <p>身高167公分，體重為67公斤&rarr;</p>BMI:
+            67(公斤)/1.67(公尺)<sup>2</sup>=24<br>
+            <small>(體重正常範圍為:18.5~24)</small>
+        </article>
+        <article>
+            <h1>檢視自己的數值</h1>
+            <form action="">
+                <label for="height">身高</label>
+                <input type="number" step="0.1" id="height" name="height" required><br>
+                <label for="weight">體重</label>
+                <input type="number" step="0.1" id="weight" name="weight" required><br><br>
+                <input type="button" value="計算" name="cale" onclick="calc()">
+                <input type="reset" value="清除" name="reset">
+                <p>
+                    您的BMI為:<span id="result"></span>
+                </p>
+            </form>
+        </article>
+    </section>
+    <aside>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>評價</th>
+                    <th>指數</th>
+                    <th>備註</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>體重過輕</td>
+                    <td>18.5 &lt; BMI</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>正常</td>
+                    <td>18.5 &le; BMI &lt;24</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>過重</td>
+                    <td>24 &le; BMI &lt; 27</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>肥胖</td>
+                    <td>27 &le; BMI &lt; 30</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>中度肥胖</td>
+                    <td>30 &le; BMI &lt; 35</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>重度肥胖</td>
+                    <td>BMI &ge; 35</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+    <footer>
+
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>
